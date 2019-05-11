@@ -1,13 +1,13 @@
 from Duck import Duck
 
-class ReadheadDuck(Duck):
+class RedheadDuck(Duck):
     def display(self):
-        print("I'm a readhead duck!")
+        print("I'm a red head duck!")
 
 if __name__ == '__main__':
-    md = ReadheadDuck()
+    rd = RedheadDuck()
 
-    md.quack()
-    md.swim()
-    md.display()
-    md.fly()
+    rd.quack()
+    rd.swim()
+    rd.display()
+    rd.fly()

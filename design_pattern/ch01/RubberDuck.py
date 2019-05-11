@@ -8,9 +8,9 @@ class RubberDuck(Duck):
         print("I'm a rubber duck")
 
 if __name__ == '__main__':
-    md = RubberDuck()
+    rd = RubberDuck()
 
-    md.quack()
-    md.swim()
-    md.display()
-    md.fly()
+    rd.quack()
+    rd.swim()
+    rd.display()
+    rd.fly()
