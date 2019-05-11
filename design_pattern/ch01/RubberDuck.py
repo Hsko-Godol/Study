@@ -6,3 +6,11 @@ class RubberDuck(Duck):
 
     def display(self):
         print("I'm a rubber duck")
+
+if __name__ == '__main__':
+    md = RubberDuck()
+
+    md.quack()
+    md.swim()
+    md.display()
+    md.fly()
