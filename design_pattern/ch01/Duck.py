@@ -1,8 +1,8 @@
 import abc
 
 class Duck(metaclass=abc.ABCMeta):
-    def quack(self):
-        print("QUACK!")
+    def performQuack(self):
+        self.quackBehavior.quack()
 
     def swim(self):
         print("SWIM~")
@@ -11,5 +11,5 @@ class Duck(metaclass=abc.ABCMeta):
     def display(self):
         pass
 
-    def fly(self):
-        print("FIY~")
+    def performFly(self):
+        self.flyBehavior.fly()

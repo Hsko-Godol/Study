@@ -1,23 +1,29 @@
-import MallardDuck, RedheadDuck, RubberDuck
+from MallardDuck import MallardDuck
+from RedheadDuck import RedheadDuck
+from RubberDuck import RubberDuck
 
 def main():
     mallard = MallardDuck()
-    mallard.quack()
+    mallard.performQuack()
     mallard.swim()
     mallard.display()
-    mallard.fly()
+    mallard.performFly()
+
+    print("-----------------------")
 
     redhead = RedheadDuck()
-    redhead.quack()
+    redhead.performQuack()
     redhead.swim()
     redhead.display()
-    redhead.fly()
+    redhead.performFly()
+
+    print("-----------------------")
 
     rubber = RubberDuck()
-    rubber.quack()
+    rubber.performQuack()
     rubber.swim()
     rubber.display()
-    rubber.fly()
+    rubber.performFly()
 
 if __name__ == '__main__':
     main()
