@@ -10,3 +10,6 @@ class Duck(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def display(self):
         pass
+
+    def fly(self):
+        print("FIY~")
