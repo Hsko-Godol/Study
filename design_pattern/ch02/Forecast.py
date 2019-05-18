@@ -1,18 +1,26 @@
 from DisplayElement import DisplayElement
+from Observer import Observer
+from Subject import Subject
 
-class Forecast(DisplayElement):
+class Forecast(Observer, DisplayElement):
+    def __init__(self, weatherData:Subject):
+        self.temp = float
+        self.humidity = float
+        self.wind_speed = float
+
+        self.weatherData = weatherData
+        self.weatherData.registerObserver(self)
+
+    def update(self, temp, humidity, wind_speed):
+        self.temp = temp + 1.0
+        self.humidity = humidity + 5.0
+        self.wind_speed = wind_speed + 0.5
+
+        self.display()
+
     def display(self):
-        future_temp = self.temp + 1.0
-        if future_temp > 40.0:
-            future_temp = 18.0
-        future_humidity = self.humidity + 5.0
-        if future_humidity > 100.0:
-            future_humidity = 0.0
-        future_wind_speed = self.wind_speed + 0.5
-        if future_wind_speed > 10.0:
-            future_wind_speed = 1.0
-
         print("This is the forecast of the weather")
-        print("Temperature :", future_temp, "C")
-        print("Humidity :", future_humidity, "%")
-        print("Wind Speed :", future_wind_speed, "m/s")
+        print("Temperature :", self.temp, "C")
+        print("Humidity :", self.humidity, "%")
+        print("Wind Speed :", self.wind_speed, "m/s")
+

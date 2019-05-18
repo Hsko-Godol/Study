@@ -5,7 +5,3 @@ class DisplayElement(metaclass=abc.ABCMeta):
     def display(self):
         pass
 
-    def update(self, temp, humidity, wind_speed):
-        self.temp = temp
-        self.humidity = humidity
-        self.wind_speed = wind_speed

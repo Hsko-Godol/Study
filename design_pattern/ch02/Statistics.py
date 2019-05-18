@@ -1,6 +1,23 @@
 from DisplayElement import DisplayElement
+from Observer import Observer
+from Subject import Subject
 
-class Statistics(DisplayElement):
+class Statistics(Observer, DisplayElement):
+    def __init__(self, weatherData:Subject):
+        self.temp = float
+        self.humidity = float
+        self.wind_speed = float
+
+        self.weatherData = weatherData
+        self.weatherData.registerObserver(self)
+
+    def update(self, temp, humidity, wind_speed):
+        self.temp = temp
+        self.humidity = humidity
+        self.wind_speed = wind_speed
+
+        self.display()
+
     def display(self):
         print("This is the statistics of the weather")
 
