@@ -5,3 +5,7 @@ class CondimentDecorator(Beverage):
     @abc.abstractmethod
     def getDescription(self):
         pass
+
+    def getSize(self):
+        return self.beverage.getSize()
+

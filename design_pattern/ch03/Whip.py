@@ -9,5 +9,14 @@ class Whip(CondimentDecorator):
         return self.beverage.getDescription() + ", 휘핑 크림"
 
     def cost(self):
-        return .10 + self.beverage.cost()
+        cost = self.beverage.cost()
+
+        if self.getSize() == "Tall":
+            cost += .05
+        elif self.getSize() == "Grande":
+            cost += .10
+        elif self.getSize() == "Venti":
+            cost += .15
+
+        return cost
 

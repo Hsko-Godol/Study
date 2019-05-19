@@ -9,5 +9,14 @@ class Soy(CondimentDecorator):
         return self.beverage.getDescription() + ", 두유"
 
     def cost(self):
-        return .15 + self.beverage.cost()
+        cost = self.beverage.cost()
+
+        if self.getSize() == "Tall":
+            cost += .10
+        elif self.getSize() == "Grande":
+            cost += .15
+        elif self.getSize() == "Venti":
+            cost += .20
+
+        return cost
 

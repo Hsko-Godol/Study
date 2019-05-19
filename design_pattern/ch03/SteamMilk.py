@@ -9,5 +9,14 @@ class SteamMilk(CondimentDecorator):
         return self.beverage.getDescription() + ", 스팀 밀크"
 
     def cost(self):
-        return .1 + self.beverage.cost()
+        cost = self.beverage.cost()
+
+        if self.getSize() == "Tall":
+            cost += .05
+        elif self.getSize() == "Grande":
+            cost += .10
+        elif self.getSize() == "Venti":
+            cost += .15
+
+        return cost
 

@@ -7,6 +7,12 @@ class Beverage(metaclass=abc.ABCMeta):
     def getDescription(self):
         return self.description
 
+    def setSize(self, size):
+        self.size = size
+
+    def getSize(self):
+        return self.size
+
     @abc.abstractmethod
     def cost(self):
         pass
